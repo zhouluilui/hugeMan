@@ -1,0 +1,35 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+/*header*/
+.headerDiv{
+    width: 100%;
+    height: 15px;
+    background: #f7f1e1;
+}
+.headerTop{
+    height: 110px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.headerLeft,.headerMiddle,.headerRight{
+   line-height: 110px;
+}
+.headerRight img, .headerMiddle img{
+    width: 18px;
+    vertical-align:middle;
+}
+.headerTop img{
+    vertical-align:middle;
+}
+.headerMiddle input{
+background-color: rgba(0, 0, 0, 0.05);
+height: 25px;
+}
+/*nav*/
+.navbar{
+    background: #8fc320;
+    height: 57px;
+}

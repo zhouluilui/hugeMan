@@ -48,6 +48,12 @@ height: 25px;
 /*横排的样式*/
 .classList{
 list-style: none;
+
+}
+.classDropItem{
+    position: absolute;
+    flex-flow: column;
+    z-index: 1;
 }
 .classSet li {
     display: inline-block;
@@ -59,12 +65,13 @@ list-style: none;
     font-size: 18px;
 }
 /*竖排的样式*/
+.dropMenu{
+    display: inline-block;
+}
 .dropMenu .classDrop{
     position: relative;
     background-color: rgba(0, 0, 0, 0.1);
     height: 440px;
-
-    flex-wrap: wrap;
     z-index: 1;
 }
 .dropMenu .classDrop li{
@@ -75,8 +82,51 @@ list-style: none;
     line-height: 146px;
 }
 .classDroplist{
-    position: absolute;;
+    position: relative;
+    display: inline-block;
     
     z-index: 1;
 }
 /*轮播图*/
+.list{
+    background: #8fc320;
+    display: flex;
+    justify-content: center;
+}
+.list .listItem{
+    width: 220px;
+    background-color: white;
+    border-radius:10px; 
+    margin: 40px 30px 40px 0;
+    text-align: center;
+    
+}
+.listItemHead1{
+    background-color: #a7d04c;
+    height: 40px;
+    line-height: 40px;
+    border-radius:10px 10px 0 0 ; 
+}
+.listItemHead2{
+    background-color: #70c8b0;
+    height: 40px;
+    line-height: 40px;
+    border-radius:10px 10px 0 0 ; 
+}
+.listItemHead3{
+    background-color: #f48f01;
+    height: 40px;
+    line-height: 40px;
+    border-radius:10px 10px 0 0 ; 
+}
+.listItemHead4{
+    background-color: #ff6d44;
+    height: 40px;
+    line-height: 40px;
+    border-radius:10px 10px 0 0 ; 
+}
+.listItemBody{
+    line-height:30px;
+    padding: 15px;
+    font-size: 14px;
+}

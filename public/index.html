@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./imgs/logo.icon">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/wySilder.min.js"></script>
     <title>绵阳小巨人教育</title>
 </head>
 
@@ -26,7 +29,6 @@
                     <form action="">
                         <input type="text" placeholder="请输入搜索关键词">
                         <a href="javascript:;"><img src="./imgs/search.png" alt=""></a>
-                       
                     </form>
                 </div>
                 <div class="headerRight">
@@ -39,28 +41,62 @@
         <!-- 导航栏 -->
         <div class="navbar">
             <div class="classSet">
-                <span>课程设置</span>
-                <ul>
-                    <li>学科教育
-                        <ul>
-                        <li>课程介绍</li>
-                        <li>课程设置</li>
-                        <li>名师课堂</li>
+                <div class="dropMenu">
+                    <div>课程设置</div>
+                    <div class="dropMenulist">
+                    <ul class="classDrop">
+                        <li>学科教育</li>
+                        <li>素质培养</li>
+                        <li>家庭教育</li>
                     </ul>
-                    </li>
-                    <li>素质培养</li>
-                    <li>家庭教育</li>
+                    <span class="classDroplist">
+                            <ul class="classDropItem" id="classDrop1">
+                                <li><a href=""> 课程介绍</a></li>
+                                <li><a href=""> 课程设置</a></li>
+                                <li><a href=""> 名师课堂</a></li>
+                            </ul>
+                            <ul class="classDropItem" id="classDrop2">
+                                <li><a href="">基础 ></a></li>
+                                <li><a href="">人文 ></a></li>
+                                <li><a href="">科学 ></a></li>
+                            </ul>
+                            <ul class="classDropItem" id="classDrop3">
+                                <li><a href="">教子有方 > ></a></li>
+                                <li><a href="">心理健康 ></a></li>
+                            </ul>
+                        </span>
+                </div>
+                </div>
+                <ul class="classList">
+                    <li><a href="javascript:;" title="网站首页">网站首页</a></li>
+                    <li><a href="javascript:;" title="小巨人介绍">小巨人介绍</a></li>
+                    <li><a href="javascript:;" title="新闻资讯">新闻资讯</a></li>
+                    <li><a href="javascript:;" title="风采展示">风采展示</a></li>
+                    <li><a href="javascript:;" title="学科教育">学科教育</a></li>
+                    <li><a href="javascript:;" title="素质培养">素质培养</a></li>
+                    <li><a href="javascript:;" title="家庭教育">家庭教育</a></li>
+                    <li><a href="javascript:;" title="联系我们">联系我们</a></li>
                 </ul>
-                <ul>
-                    <li><a href="javascript:;">网站首页</a></li>
-                    <li><a href="javascript:;">小巨人介绍</a></li>
-                    <li><a href="javascript:;">新闻资讯</a></li>
-                    <li><a href="javascript:;">风采展示</a></li>
-                    <li><a href="javascript:;">学科教育</a></li>
-                    <li><a href="javascript:;">素质培养</a></li>
-                    <li><a href="javascript:;">家庭教育</a></li>
-                    <li><a href="javascript:;">联系我们</a></li>
-                </ul>
+
+            </div>
+
+        </div>
+        <!--轮播图-->
+        <div class="carouse">
+            <div class="js-silder">
+                <div class="silder-scroll">
+                    <div class="silder-main">
+                        <div class="silder-main-img">
+                            <img src="./imgs/banner/banner1.jpg" alt="banner1">
+                        </div>
+                        <div class="silder-main-img">
+                            <img src="./imgs/banner/banner2.jpg" alt="banner2">
+                        </div>
+                        <div class="silder-main-img">
+                            <img src="./imgs/banner/banner3.jpg" alt="banner3">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- 课程列表 -->
@@ -82,5 +118,17 @@
 
     </div>
 </body>
-
+<script>
+        $(function (){
+            $(".js-silder").silder({
+                auto: true,//自动播放，传入任何可以转化为true的值都会自动轮播
+                speed: 20,//轮播图运动速度
+                sideCtrl: true,//是否需要侧边控制按钮
+                bottomCtrl: true,//是否需要底部控制按钮
+                defaultView: 0,//默认显示的索引
+                interval: 3000,//自动轮播的时间，以毫秒为单位，默认3000毫秒
+                activeClass: "active",//小的控制按钮激活的样式，不包括作用两边，默认active
+            });
+        });
+    </script>
 </html>

@@ -11,7 +11,6 @@
 .headerTop{
     height: 110px;
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-evenly;
 }
 .headerLeft,.headerMiddle,.headerRight{
@@ -19,7 +18,7 @@
 }
 .headerRight img, .headerMiddle img{
     width: 18px;
-    vertical-align:middle;
+    display:inline-block; 
 }
 .headerTop img{
     vertical-align:middle;
@@ -29,7 +28,55 @@ background-color: rgba(0, 0, 0, 0.05);
 height: 25px;
 }
 /*nav*/
-.navbar{
+.navbar .classSet{
     background: #8fc320;
     height: 57px;
+    display: flex;
+    justify-content: center;
+    line-height: 57px;
 }
+.classSet .dropMenu{
+    width: 200px;
+}
+.classSet .dropMenu div{
+    font-size: 20px;
+    background-color: #f48f01;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+/*横排的样式*/
+.classList{
+list-style: none;
+}
+.classSet li {
+    display: inline-block;
+    padding: 0 15px 0 15px;
+}
+.classSet li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+/*竖排的样式*/
+.dropMenu .classDrop{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 440px;
+
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.dropMenu .classDrop li{
+    font-size: 20px;
+    height: 146px;
+    color: black;
+    font-weight: normal;
+    line-height: 146px;
+}
+.classDroplist{
+    position: absolute;;
+    
+    z-index: 1;
+}
+/*轮播图*/
